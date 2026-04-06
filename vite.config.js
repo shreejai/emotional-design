@@ -15,6 +15,10 @@ export default defineConfig({
           __dirname,
           "pages/01a_your-first-animation/index.html"
         ),
+        "01a_apple_layered_scroll_transitions": resolve(
+          __dirname,
+          "pages/01a_apple_layered_scroll_transitions/index.html"
+        ),
         "01b_challenge": resolve(__dirname, "pages/01b_challenge/index.html"),
         "02a_understanding-properties": resolve(
           __dirname,

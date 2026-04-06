@@ -1,0 +1,79 @@
+/* ScrollTrigger markers (optional debug) above page chrome */
+[class*='gsap-marker-'] {
+  z-index: 99999 !important;
+}
+
+.apple-layer-demo {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.apple-layer-demo.demo {
+  overflow: visible;
+}
+
+.background {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vh, 3rem);
+  min-height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  background: linear-gradient(145deg, #0a0c1f 0%, #15183a 40%, #1a1f45 70%, #11142b 100%);
+  background-size: 200% 200%;
+}
+
+/* Centered dark radial + blur (vignette depth, sits above mood glow) */
+.background::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(140%, 56rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+    circle closest-side,
+    rgba(2, 4, 14, 0.88) 0%,
+    rgba(4, 6, 20, 0.5) 38%,
+    rgba(8, 10, 28, 0.12) 62%,
+    transparent 78%
+  );
+  filter: blur(56px);
+  transform: translate(-50%, -50%);
+}
+
+.background-mood {
+  position: absolute;
+  inset: -20%;
+  z-index: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 40%,
+    rgba(84, 160, 255, 0.22) 0%,
+    transparent 55%
+  );
+  pointer-events: none;
+  opacity: 0.35;
+  transform: scale(1.05);
+}
+
+.headline,
+.hero,
+.details {
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, #1dd1a1, #54a0ff);
+  border-radius: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
