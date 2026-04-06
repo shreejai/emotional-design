@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your First Animation</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="nav">
+        <a href="/">
+          <img src=" /logo.svg" alt="logo" />
+        </a>
+        <a href="https://jsmastery.com/all-courses" target="_blank"
+          >GSAP Course</a
+        >
+      </header>
+
+      <div class="content">
+        <div class="arrow">
+          <a href="../../index.html">
+            <img src=" /arrow.svg" alt="arrow" />
+          </a>
+        </div>
+
+        <section>
+          <h1>Apple's Approach to Layering Scroll Transitions</h1>
+          <p>
+            Apple’s layered scroll transitions create a cinematic experience by animating different elements at varying speeds and delays. This approach, inspired by parallax motion, establishes a hierarchy of attention, guiding users through the content in a natural and engaging way. By implementing this technique, developers can elevate their scroll pages from flat to immersive, leaving a lasting impression on users.
+          </p>
+          <p>It's simpler than you think, but the execution is <span class="font-bold text-yellow-200 italic">everything.</span></p>
+
+          <h2 class="text-2xl font-bold text-white">The Apple Layering Formula</h2>
+          <ul class="list-disc list-outside text-lg text-blue-100">
+            <li><span class="font-bold">Background sets the mood </span> (subtle color shifts, gradients) -> <span class="font-bold text-pink-400"> ≈ 0ms </span></li>
+            <li><span class="font-bold">Headline establishes context </span> (fades in first, slower movement) -> <span class="font-bold text-blue-400"> ≈ 100ms delay </span></li>
+            <li><span class="font-bold">Hero content commands attention </span> (main product, faster/dramatic movement) -> <span class="font-bold text-red-400"> ≈ 300ms delay </span></li>
+            <li><span class="font-bold">Details complete the story </span> (specs, features, appear last) -> <span class="font-bold text-green-400"> ≈ 600ms delay </span>
+            </li>
+          </ul>
+
+          <ol class="list-decimal list-outside text-lg text-blue-100">
+            <li>Layer 1 is the background, to set the mood with gradients and colors.</li>
+            <li>Layer 2 is the headline, to introduce the concept.</li>
+            <li>Layer 3 is the hero, which commands your attention. And this is your main product or the image.</li>
+            <li>And the Layer 4 is the details, that complete the story.</li>
+          </ol>
+        </section>
+      </div>
+
+      <div class="demo apple-layer-demo text-white">
+        <div class="background">
+          <div class="background-mood" aria-hidden="true"></div>
+          <h3 class="headline text-4xl font-bold font-serif text-white text-center max-w-2xl">
+            Layered scroll — headline first, <span class="text-white/50 italic">slower</span>
+          </h3>
+          <div class="hero flex-center">
+            <div class="card flex-center font-bold" role="img" aria-label="Product hero">
+              Your Hero Product
+            </div>
+          </div>
+          <div class="details text-center max-w-md text-blue-100">
+            <p class="text-lg mb-4">Details finish the story — specs and supporting copy.</p>
+            <ul class="flex gap-2 bg-white/10 rounded-lg">
+              <li class="p-4">Feature 1</li>
+              <li class="p-4">Feature 2</li>
+              <li class="p-4">Feature 3</li>
+              <li class="p-4">Feature 4</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <script type="module" src="script.js"></script>
+    </main>
+  </body>
+</html>
