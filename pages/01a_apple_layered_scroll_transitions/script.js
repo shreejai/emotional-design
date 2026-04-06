@@ -41,8 +41,8 @@ tl.fromTo(
 // Layer 3 — hero
 tl.fromTo(
   '.hero .card',
-  { autoAlpha: 0, scale: 0.82, y: 72 },
-  { autoAlpha: 1, scale: 1, y: 0, ease: 'back.out(1.35)', duration: 0.22 },
+  { autoAlpha: 0, scale: 0.82, z: 72, rotation: -5 },
+  { autoAlpha: 1, scale: 1, z: 0, rotation: 0, ease: 'back.out(1.35)', duration: 0.22 },
   'hero',
 );
 
