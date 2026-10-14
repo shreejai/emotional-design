@@ -28,10 +28,10 @@ tl.fromTo(
   { opacity: 0.2, scale: 1.12 },
   { opacity: 0.55, scale: 1, ease: 'sine.inOut', duration: 0.35 },
   'background',
-);
+)
 
 // Layer 2 — headline (slower ease; scroll still drives time via scrub)
-tl.fromTo(
+.fromTo(
   '.headline',
   { autoAlpha: 0, y: 56 },
   { autoAlpha: 1, y: 0, ease: 'power3.out', duration: 0.28 },
@@ -42,16 +42,17 @@ tl.fromTo(
 tl.fromTo(
   '.hero .card',
   { autoAlpha: 0, scale: 0.82, z: 72, rotation: -5 },
-  { autoAlpha: 1, scale: 1, z: 0, rotation: 0, ease: 'back.out(1.35)', duration: 0.22 },
+  { autoAlpha: 1, scale: 1, z: 0, rotation: 0, ease: 'power3.out', duration: 1.22 },
   'hero',
-);
+)
 
 // Layer 4 — details
-tl.fromTo(
-  '.details',
+.fromTo(
+  '.details li',
   { autoAlpha: 0, y: 40 },
-  { autoAlpha: 1, y: 0, ease: 'power2.out', duration: 0.3 },
+  { autoAlpha: 1, y: 0, ease: 'power2.out', duration: 0.3, stagger: 0.5 },
   'details',
+  '>'
 );
 
 ScrollTrigger.create({
